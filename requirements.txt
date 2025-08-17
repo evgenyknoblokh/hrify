@@ -1,0 +1,4 @@
+flask>=2.2,<3.0
+openai>=1.0
+python-dotenv>=1.0
+langdetect>=1.0.9
