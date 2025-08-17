@@ -1,0 +1,113 @@
+{
+  "ru": {
+    "langName": "Русский",
+    "title": "Пишите как HR",
+    "subtitle": "Введите текст, который нужно преобразовать в официальное письмо от имени HR. Выберите, что вы хотите сообщить кандидату: отказ, предложение о найме или напоминание.",
+    "placeholder": "Введите ваш текст здесь...",
+    "reject": "Отказать",
+    "hire": "Нанять",
+    "remind": "Напомнить",
+    "clear": "Очистить текст",
+    "processing": "Обработка… пожалуйста, подождите.",
+    "enterText": "Пожалуйста, введите текст для обработки.",
+    "errorFetch": "Ошибка при отправке запроса. Попробуйте ещё раз.",
+
+    "navHome": "Главная",
+    "navWhy": "Для кого это?",
+    "navContact": "Связаться",
+
+    "heroTitle": "HR-письма за 10 секунд",
+    "heroLead": "hrify помогает фаундерам и малому бизнесу писать офферы, отказы и напоминания профессиональным тоном — одним кликом.",
+    "btnTry": "Попробовать бесплатно",
+    "btnHow": "Как это работает",
+
+    "forwhoTitle": "Для кого hrify?",
+    "aud1Title": "Фаундеры стартапов",
+    "aud1Desc": "Нет HR? hrify помогает отвечать кандидатам профессионально, не отвлекая от продукта.",
+    "aud2Title": "Малый бизнес (2–20)",
+    "aud2Desc": "Один экран — три письма: оффер, отказ, напоминание. Быстро, единообразно, без ошибок.",
+    "aud3Title": "ИП и фриланс-команды",
+    "aud3Desc": "Мультиязычность из коробки: RU / EN / ES. Коммуницируйте с исполнителями на их языке.",
+
+    "howTitle": "Как это работает?",
+    "step1": "Вводите черновик или пару мыслей — хоть «хочу сделать оффер Ивану».",
+    "step2": "Нажимаете кнопку: Нанять, Отказать или Напомнить.",
+    "step3": "Получаете готовое письмо — структурированное, вежливое, без рисков.",
+
+    "footerCopy": "© 2025 hrify"
+  },
+  "en": {
+    "langName": "English",
+    "title": "Write Like an HR",
+    "subtitle": "Paste any text and get a professional HR-style letter. Choose whether you want to inform the candidate about rejection, hiring, or send a reminder.",
+    "placeholder": "Type or paste your text here...",
+    "reject": "Reject",
+    "hire": "Hire",
+    "remind": "Remind",
+    "clear": "Clear",
+    "processing": "Processing… please wait.",
+    "enterText": "Please enter some text first.",
+    "errorFetch": "Request failed. Please try again.",
+
+    "navHome": "Home",
+    "navWhy": "Who is it for?",
+    "navContact": "Contact",
+
+    "heroTitle": "HR letters in 10 seconds",
+    "heroLead": "hrify helps founders and small businesses write offers, rejections and reminders in a professional tone — in one click.",
+    "btnTry": "Try for free",
+    "btnHow": "How it works",
+
+    "forwhoTitle": "Who is hrify for?",
+    "aud1Title": "Startup founders",
+    "aud1Desc": "No HR? hrify helps you reply to candidates professionally without distracting you from the product.",
+    "aud2Title": "Small business (2–20)",
+    "aud2Desc": "One screen — three letters: offer, rejection, reminder. Fast, consistent, error-free.",
+    "aud3Title": "Sole proprietors & freelance teams",
+    "aud3Desc": "Multilingual out of the box: RU / EN / ES. Communicate in the candidate’s language.",
+
+    "howTitle": "How does it work?",
+    "step1": "Enter a draft or just a couple of thoughts — even “we want to make an offer to Ivan”.",
+    "step2": "Click: Hire, Reject or Remind.",
+    "step3": "Get a ready-to-send letter — well-structured, polite and low-risk.",
+
+    "footerCopy": "© 2025 hrify"
+  },
+  "es": {
+    "langName": "Español",
+    "title": "Escribe como RR. HH.",
+    "subtitle": "Introduce un texto y obtén una carta profesional de RR. HH. Elige si quieres informar al candidato sobre el rechazo, la contratación o enviar un recordatorio.",
+    "placeholder": "Escribe o pega tu texto aquí...",
+    "reject": "Rechazar",
+    "hire": "Contratar",
+    "remind": "Recordar",
+    "clear": "Limpiar",
+    "processing": "Procesando… por favor espera.",
+    "enterText": "Por favor, introduce un texto primero.",
+    "errorFetch": "La solicitud ha fallado. Inténtalo de nuevo.",
+
+    "navHome": "Inicio",
+    "navWhy": "¿Para quién?",
+    "navContact": "Contacto",
+
+    "heroTitle": "Cartas de RR. HH. en 10 segundos",
+    "heroLead": "hrify ayuda a fundadores y pequeñas empresas a redactar ofertas, rechazos y recordatorios en tono profesional con un solo clic.",
+    "btnTry": "Probar gratis",
+    "btnHow": "Cómo funciona",
+
+    "forwhoTitle": "¿Para quién es hrify?",
+    "aud1Title": "Fundadores de startups",
+    "aud1Desc": "¿Sin RR. HH.? hrify te ayuda a responder a los candidatos de forma profesional sin distraerte del producto.",
+    "aud2Title": "Pequeñas empresas (2–20)",
+    "aud2Desc": "Una pantalla — tres cartas: oferta, rechazo, recordatorio. Rápido, consistente y sin errores.",
+    "aud3Title": "Autónomos y equipos freelance",
+    "aud3Desc": "Multilingüe desde el primer día: RU / EN / ES. Comunícate en el idioma del candidato.",
+
+    "howTitle": "¿Cómo funciona?",
+    "step1": "Escribe un borrador o un par de ideas — incluso «quiero hacer una oferta a Iván».",
+    "step2": "Pulsa: Contratar, Rechazar o Recordar.",
+    "step3": "Obtén una carta lista para enviar — estructurada, cortés y sin riesgos.",
+
+    "footerCopy": "© 2025 hrify"
+  }
+}

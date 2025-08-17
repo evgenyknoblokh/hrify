@@ -1,0 +1,327 @@
+/* why.css
+ *
+ * Dedicated styles for the “Для кого это?” page.  The goal here is to
+ * provide a clean, professional layout that adapts smoothly from wide
+ * desktop screens down to narrow mobile devices.  Instead of complex
+ * burger menus and animations, the navigation and sections reflow
+ * naturally thanks to flexbox and media queries.  The palette is
+ * light and neutral to align with the main application.
+ */
+
+/* Reset and base typography */
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    min-height: 100vh;
+}
+
+/* Header — единая сетка для всех страниц */
+.why-header {
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.why-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: .5rem 1rem;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    /* logo | nav | lang */
+    align-items: center;
+    gap: 12px;
+}
+
+.why-logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+}
+
+/* одинаковое меню */
+.why-nav {
+    display: flex;
+    justify-content: right;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: #555;
+    text-decoration: none;
+    padding: .5rem 0;
+    transition: color .15s ease;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    color: #007bff;
+    font-weight: 600;
+}
+
+/* селектор языка — общий класс используется и на главной */
+.lang-inline {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.lang-inline label {
+    font-size: .9rem;
+    color: #555;
+}
+
+.lang-inline select {
+    padding: .35rem .5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #333;
+}
+
+/* адаптив шапки */
+@media (max-width: 720px) {
+    .why-container {
+        grid-template-columns: 1fr auto;
+        /* logo слева, язык справа */
+        grid-auto-rows: auto;
+    }
+
+    .why-nav {
+        grid-column: 1 / -1;
+        /* меню на всю ширину ниже */
+        justify-content: center;
+        border-top: 1px solid #eee;
+        padding-top: .35rem;
+    }
+}
+
+
+/* Hero section */
+.hero {
+    background-color: #ffffff;
+    padding: 3rem 1rem;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    margin: 0 0 0.5rem;
+}
+
+.hero p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn {
+    padding: 0.75rem 1.25rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Generic section */
+.section {
+    padding: 2rem 1rem;
+}
+
+.section h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Cards for “For Who” */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 1rem;
+    flex: 1 1 calc(33.333% - 1rem);
+    min-width: 250px;
+    max-width: 350px;
+    text-align: center;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Steps */
+
+.number {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.75rem;
+    font-weight: 600;
+}
+
+.steps {
+    margin: 12px 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    justify-content: center;
+    gap: 12px;
+}
+
+.steps li {
+    display: grid;
+    grid-template-columns: clamp(26px, 4.5vw, 32px) 1fr;
+    /* фикс-колонка под кружок */
+    align-items: start;
+    column-gap: 12px;
+}
+
+.steps .n {
+    width: clamp(26px, 4.5vw, 32px);
+    height: clamp(26px, 4.5vw, 32px);
+    border-radius: 50%;
+    background: rgba(56, 189, 248, .12);
+    border: 1px solid rgba(56, 189, 248, .35);
+    color: #6c757d;
+    display: grid;
+    place-items: center;
+    line-height: 1;
+    padding: 0;
+    flex: 0 0 auto;
+    font-weight: 700;
+    font-size: clamp(0.9rem, 0.8rem + 0.3vw, 1rem);
+}
+
+.w-steps li>*:nth-child(2) {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+li p {
+    margin-top: 3px;
+}
+
+
+/* Footer */
+.footer {
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.footer-links .nav-link {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.footer-links .nav-link.active,
+.footer-links .nav-link:hover {
+    color: #007bff;
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 100%;
+    }
+
+    .why-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .why-nav {
+        margin-top: 0.5rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+}

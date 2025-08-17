@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="title">hrify – Напиши как HR</title>
+    <!-- общий стиль страницы генератора -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- тот же набор стилей, что у продающей страницы -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='why.css') }}">
+</head>
+
+<body>
+    <!-- ОДИНАКОВЫЙ ХЕДЕР, как на /why -->
+    <header class="why-header">
+        <div class="why-container">
+            <div class="why-logo"><a href="/">hrify</a></div>
+
+            <nav class="why-nav">
+                <a href="/" class="nav-link active" data-i18n="navHome">Главная</a>
+                <a href="/why" class="nav-link" data-i18n="navWhy">Для кого это?</a>
+                <a href="mailto:hi@hrify.space" class="nav-link" data-i18n="navContact">Связаться</a>
+            </nav>
+
+            <!-- язык интерфейса (справа, в одну линию) -->
+            <div class="lang-inline">
+                <select id="langSelect" aria-label="Выбор языка">
+                    <option value="ru">Русский</option>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-wrap">
+        <!-- карточка генератора писем -->
+        <section class="app-card">
+            <header class="app-head">
+                <h1 class="app-title" id="title" data-i18n="title">Пишите как HR</h1>
+                <p class="app-subtitle" id="subtitle" data-i18n="subtitle">
+                    Введите текст, который нужно преобразовать в официальное письмо от имени HR. Выберите,
+                    что вы хотите сообщить кандидату: отказ, предложение о найме или напоминание.
+                </p>
+            </header>
+
+            <textarea id="userText" class="text-input" data-i18n-placeholder="placeholder"
+                placeholder="Введите ваш текст здесь..." rows="8"></textarea>
+
+            <div class="buttons">
+                <button class="btn btn-reject" data-scenario="reject" id="btnReject"
+                    data-i18n="reject">Отказать</button>
+                <button class="btn btn-hire" data-scenario="hire" id="btnHire" data-i18n="hire">Нанять</button>
+                <button class="btn btn-remind" data-scenario="remind" id="btnRemind"
+                    data-i18n="remind">Напомнить</button>
+                <button class="btn btn-clear" id="clearBtn" data-i18n="clear">Очистить текст</button>
+            </div>
+
+            <div id="resultWrap" class="result-wrap" style="display:none;">
+                <div id="result" class="result"></div>
+                <button id="copyBtn" class="btn-copy" title="Скопировать" aria-label="Скопировать">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="currentColor" aria-hidden="true">
+                        <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1
+                    0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9
+                    2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- ОДИНАКОВЫЙ ФУТЕР -->
+    <footer class="footer">
+        <div class="footer-content">
+            © 2025 hrify
+            <span class="footer-links">
+                <a href="/" class="nav-link active" data-i18n="navHome">Главная</a>
+                <a href="/why" class="nav-link" data-i18n="navWhy">Для кого это?</a>
+                <a href="mailto:hi@hrify.space" class="nav-link" data-i18n="navContact">Связаться</a>
+            </span>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

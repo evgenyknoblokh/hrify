@@ -1,0 +1,282 @@
+html{ -webkit-text-size-adjust:100%; }     /* стабильный размер текста в iOS Safari */
+
+/*
+ * style.css — экран генератора (главная) в том же светлом стиле, что why.css
+ * ничего «тёмного», аккуратные карточки и кнопки, адаптивная сетка.
+*/
+
+/* базовые цвета и типографика под why.css */
+
+:root {
+    --bg: #f5f7fa;
+    --text: #333;
+    --muted: #555;
+    --line: #ddd;
+    --card: #fff;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .05), 0 6px 24px rgba(0, 0, 0, .06);
+
+    --red: #e74c3c;
+    --red-hover: #c0392b;
+    --green: #27ae60;
+    --green-hover: #1e8449;
+    --orange: #f39c12;
+    --orange-hover: #d68910;
+    --gray: #7f8c8d;
+    --gray-hover: #626e70;
+
+    --radius: 10px;
+    --pad: 1rem;
+    --gap: .5rem;
+
+    --fs-sm: clamp(.9rem, .85rem + .2vw, 1rem);
+    --fs-md: clamp(1rem, .95rem + .3vw, 1.0625rem);
+    --fs-lg: clamp(1.4rem, 1.2rem + .8vw, 2rem);
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* правый компактный селектор языка — совпадает визуально с why.css */
+.lang-inline {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.lang-inline label {
+    font-size: var(--fs-sm);
+    color: var(--muted);
+}
+
+.lang-inline select {
+    padding: .35rem .5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #333;
+}
+
+/* основной контейнер */
+.main-wrap {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    flex: 1 0 auto;
+}
+
+/* карточка приложения */
+.app-card {
+    max-width: 760px;
+    margin: 1rem auto 1.5rem;
+    background: var(--card);
+    border: 1px solid #eee;
+    border-radius: var(--radius);
+    padding: calc(var(--pad) + .25rem);
+    box-shadow: var(--shadow);
+}
+
+.app-head {
+    text-align: center;
+}
+
+.app-title {
+    margin: 0 0 .25rem;
+    font-size: var(--fs-lg);
+    font-weight: 700;
+}
+
+.app-subtitle {
+    margin: .25rem auto 1rem;
+    color: var(--muted);
+    font-size: var(--fs-sm);
+    max-width: 70ch;
+}
+
+/* поле ввода — единый кроссбраузерный вид */
+.text-input {
+    width: 100%;
+    min-height: 180px;
+    box-sizing: border-box;
+
+    /* визуал */
+    background: #fff;
+    color: #111827;
+    border: 1px solid #d1d5db;
+    /* gray-300 */
+    border-radius: 10px;
+    padding: 12px 14px;
+
+    /* типографика */
+    font: inherit;
+    /* не монопространство */
+    font-size: 16px;
+    /* избегаем zoom на iOS */
+    line-height: 1.5;
+    letter-spacing: normal;
+
+    /* поведение */
+    resize: vertical;
+    outline: none;
+    caret-color: #111827;
+
+    /* кроссбраузерные сбросы артефактов */
+    -webkit-appearance: none;
+    appearance: none;
+    background-clip: padding-box;
+    /* убирает «светящиеся» углы в Safari */
+    box-shadow: inset 0 1px 0 rgba(0, 0, 0, .02);
+    transition: border-color .15s ease, box-shadow .15s ease, background-color .15s ease;
+}
+
+.text-input:focus {
+    border-color: #93c5fd;
+    /* blue-300 */
+    box-shadow: 0 0 0 3px rgba(147, 197, 253, .35);
+}
+
+
+/* кнопки — цвета как были, но с nowrap и аккуратной сеткой */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .6rem;
+    margin-top: .75rem;
+    margin-bottom: .5rem;
+}
+
+@media (max-width:560px) {
+    .buttons {
+        grid-template-columns: 1fr;
+    }
+}
+
+.btn {
+    padding: .7rem .9rem;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 600;
+    font-size: var(--fs-md);
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .06);
+    transition: filter .15s ease, transform .05s ease, background-color .15s ease;
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn-reject {
+    background: var(--red);
+}
+
+.btn-reject:hover {
+    background: var(--red-hover);
+}
+
+.btn-hire {
+    background: var(--green);
+}
+
+.btn-hire:hover {
+    background: var(--green-hover);
+}
+
+.btn-remind {
+    background: var(--orange);
+}
+
+.btn-remind:hover {
+    background: var(--orange-hover);
+}
+
+.btn-clear {
+    background: var(--gray);
+}
+
+.btn-clear:hover {
+    background: var(--gray-hover);
+}
+
+/* результат */
+.result-wrap {
+    position: relative;
+    margin-top: .5rem;
+}
+
+.result {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 1rem;
+    padding-bottom: 2.5rem;
+    white-space: pre-line;
+    font-size: var(--fs-md);
+    line-height: 1.5;
+    color: #222;
+}
+
+.result.error {
+    color: #c0392b;
+    font-weight: 600;
+}
+
+/* копировать */
+.btn-copy {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    background: #fff;
+    border: 1px solid #ddd;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: none;
+    /* важно: по умолчанию скрыта */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #555;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* показываем кнопку ТОЛЬКО когда результат финальный */
+.result-wrap.is-final .btn-copy {
+    display: inline-flex;
+}
+
+.btn-copy:hover {
+    background: #f7f7f7;
+    color: #000;
+    border-color: #ccc;
+}
+
+.btn-copy svg {
+    display: block;
+    pointer-events: none;
+}
+
+/* мелкие правки для хедера/футера (совместимость с why.css) */
+.why-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.footer {
+    margin-top: auto;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>hrify — HR-письма за 10 секунд</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='why.css') }}" />
+</head>
+
+<body>
+    <header class="why-header">
+        <div class="why-container">
+            <div class="why-logo"><a href="/">hrify</a></div>
+
+            <nav class="why-nav">
+                <a href="/" class="nav-link" data-i18n="navHome">Главная</a>
+                <a href="/why" class="nav-link active" data-i18n="navWhy">Для кого это?</a>
+                <a href="mailto:hi@hrify.space" class="nav-link" data-i18n="navContact">Связаться</a>
+            </nav>
+
+            <div class="lang-inline">
+                <select id="langSelect" aria-label="Выбор языка">
+                    <option value="ru">Русский</option>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 data-i18n="heroTitle">HR-письма за 10 секунд</h1>
+            <p data-i18n="heroLead">
+                hrify помогает фаундерам и малому бизнесу писать офферы, отказы и напоминания профессиональным тоном —
+                одним кликом.
+            </p>
+            <div class="btn-group">
+                <a href="/" class="btn btn-primary" data-i18n="btnTry">Попробовать бесплатно</a>
+                <a href="#how" class="btn btn-secondary" data-i18n="btnHow">Как это работает</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 data-i18n="forwhoTitle">Для кого hrify?</h2>
+        <div class="cards">
+            <div class="card">
+                <h3 data-i18n="aud1Title">Фаундеры стартапов</h3>
+                <p data-i18n="aud1Desc">Нет HR? hrify помогает отвечать кандидатам профессионально, не отвлекая от
+                    продукта.</p>
+            </div>
+            <div class="card">
+                <h3 data-i18n="aud2Title">Малый бизнес (2–20)</h3>
+                <p data-i18n="aud2Desc">Один экран — три письма: оффер, отказ, напоминание. Быстро, единообразно, без
+                    ошибок.</p>
+            </div>
+            <div class="card">
+                <h3 data-i18n="aud3Title">ИП и фриланс-команды</h3>
+                <p data-i18n="aud3Desc">Мультиязычность из коробки: RU / EN / ES. Коммуницируйте с исполнителями на их
+                    языке.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="how">
+        <h2 data-i18n="howTitle">Как это работает?</h2>
+        <ol class="steps">
+            <li>
+                <div class="n">1</div>
+                <p data-i18n="step1">Вводите черновик или пару мыслей — хоть «хочу сделать оффер Ивану».</p>
+            </li>
+            <li>
+                <div class="n">2</div>
+                <p data-i18n="step2">Нажимаете кнопку: Нанять, Отказать или Напомнить.</p>
+            </li>
+            <li>
+                <div class="n">3</div>
+                <p data-i18n="step3">Получаете готовое письмо — структурированное, вежливое, без рисков.</p>
+            </li>
+        </ol>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <span data-i18n="footerCopy">© 2025 hrify</span>
+            <span class="footer-links">
+                <a href="/" class="nav-link" data-i18n="navHome">Главная</a>
+                <a href="/why" class="nav-link active" data-i18n="navWhy">Для кого это?</a>
+                <a href="mailto:hi@hrify.space" class="nav-link" data-i18n="navContact">Связаться</a>
+            </span>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
